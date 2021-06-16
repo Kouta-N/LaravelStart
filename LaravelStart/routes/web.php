@@ -84,10 +84,17 @@ EOF;
 
 // });
 
+// ルートパラメータを使用する場合
 // Route::get('hello/{id?}/{pass?}', 'App\Http\Controllers\HelloController@index') ;
 // Route::get('hello/other', 'App\Http\Controllers\HelloController@other') ;
-Route::get('hello', 'App\Http\Controllers\HelloController@index')->middleware('hello');
+
+// middlewareを呼ぶ場合
+// Route::get('hello', 'App\Http\Controllers\HelloController@index')->middleware('hello');
+
+Route::get('hello', 'App\Http\Controllers\HelloController@index');
 Route::post('hello', 'App\Http\Controllers\HelloController@post') ;
+
+// 関数を指定する場合
 // Route::get('hello/', function(){
 //     return view('hello.index');
 // }) ;
