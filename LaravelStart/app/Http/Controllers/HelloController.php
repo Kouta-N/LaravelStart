@@ -94,10 +94,14 @@ function tag($tag,$txt){
 
 class HelloController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-        $data = ['one','two','three','four','five'];
-       return view('hello.index',['data'=>$data]);
+        // $data = [
+        //     ['name'=>'山田たろう','mail'=>'taro@yamada'],
+        //     ['name'=>'田中はなこ','mail'=>'tanaka@flower'],
+        //     ['name'=>'鈴木さちこ','mail'=>'sachiko@happy']
+        // ];
+       return view('hello.index');
     }
 
     public function post(Request $request)

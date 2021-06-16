@@ -21,6 +21,24 @@
    </style>
  </head>
 
+ <body>
+  <h1>@yield('title')</h1>
+@section('menubar')
+<h2 class="menutitle">※メニュー</h2>
+<ul>
+    <li>@show</li>
+</ul>
+<hr size="1">
+<div class="content">
+    @yield('content')
+</div>
+<div class="footer">
+    @yield('footer')
+</div>
+
+</body>
+</html>
+
  {{-- <body>
   <h1>Blade/Index</h1>
     <p>&#064;foreachディレクティブの例</p>
@@ -52,21 +70,3 @@
         @endwhile
     </ol>
  </body> --}}
-
-<body>
-  <h1>@yield('title')</h1>
-@section('menubar')
-<h2 class="menutitle">メニュー</h2>
-<ul>
-    <li>@show</li>
-</ul>
-<hr size="1">
-<div class="content">
-    @yield('content')
-</div>
-<div class="footer">
-    @yield('footer')
-</div>
-
-</body>
-</html>
