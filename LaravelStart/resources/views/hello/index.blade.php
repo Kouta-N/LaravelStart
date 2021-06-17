@@ -8,7 +8,7 @@
 
 <table>
     @foreach($items as $index => $item)
-    [Record{{ $index+1 }}]<br>
+    Record{{ $index+1 }}<br>
     Name: {{$item->name}}<br>
     Mail: {{$item->mail}}<br>
     Age: {{$item->age}}<br><br>
