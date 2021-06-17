@@ -7,6 +7,8 @@
      color: #999;
    }
 
+th {background-color:#999; color:fff; padding:5px 10px;}
+td {border:solid 1px #aaa; color:fff; padding:5px 10px;}
    h1 {
      font-size: 100pt;
      text-align: right;
