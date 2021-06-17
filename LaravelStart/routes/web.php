@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Middleware\HelloMiddleware;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -83,10 +84,29 @@ EOF;
 
 // });
 
+// ルートパラメータを使用する場合
 // Route::get('hello/{id?}/{pass?}', 'App\Http\Controllers\HelloController@index') ;
 // Route::get('hello/other', 'App\Http\Controllers\HelloController@other') ;
-Route::get('hello', 'App\Http\Controllers\HelloController@index') ;
+
+// middlewareを呼ぶ場合
+// Route::get('hello', 'App\Http\Controllers\HelloController@index')->middleware('hello');
+
+Route::get('hello', 'App\Http\Controllers\HelloController@index');
 Route::post('hello', 'App\Http\Controllers\HelloController@post') ;
+
+Route::get('hello/add', 'App\Http\Controllers\HelloController@add');
+Route::post('hello/add', 'App\Http\Controllers\HelloController@create') ;
+
+Route::get('hello/edit', 'App\Http\Controllers\HelloController@edit');
+Route::post('hello/edit', 'App\Http\Controllers\HelloController@update') ;
+
+Route::get('hello/del', 'App\Http\Controllers\HelloController@del');
+Route::post('hello/del', 'App\Http\Controllers\HelloController@remove') ;
+
+Route::get('hello/show', 'App\Http\Controllers\HelloController@show') ;
+
+Route::get('person', 'App\Http\Controllers\PersonController@index') ;
+// 関数を指定する場合
 // Route::get('hello/', function(){
 //     return view('hello.index');
 // }) ;

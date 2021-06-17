@@ -7,6 +7,8 @@
      color: #999;
    }
 
+th {background-color:#999; color:fff; padding:5px 10px;}
+td {border:solid 1px #aaa; color:fff; padding:5px 10px;}
    h1 {
      font-size: 100pt;
      text-align: right;
@@ -20,6 +22,24 @@
    .footer{text-align:right; font-sie:10pt; margin:10px; border-bpttp,:solid 1px #ccc; color#ccc;}
    </style>
  </head>
+
+ <body>
+  <h1>@yield('title')</h1>
+@section('menubar')
+<h2 class="menutitle">※メニュー</h2>
+<ul>
+    <li>@show</li>
+</ul>
+<hr size="1">
+<div class="content">
+    @yield('content')
+</div>
+<div class="footer">
+    @yield('footer')
+</div>
+
+</body>
+</html>
 
  {{-- <body>
   <h1>Blade/Index</h1>
@@ -52,21 +72,3 @@
         @endwhile
     </ol>
  </body> --}}
-
-<body>
-  <h1>@yield('title')</h1>
-@section('menubar')
-<h2 class="menutitle">メニュー</h2>
-<ul>
-    <li>@show</li>
-</ul>
-<hr size="1">
-<div class="content">
-    @yield('content')
-</div>
-<div class="footer">
-    @yield('footer')
-</div>
-
-</body>
-</html>
