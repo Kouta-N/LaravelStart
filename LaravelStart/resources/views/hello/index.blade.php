@@ -7,13 +7,11 @@
  @section('content')
 
 <table>
-    <tr><th>Name</th><th>Mail</th><th>Age</th></tr>
-    @foreach($items as $item)
-    <tr>
-        <td>{{ $item->name }}</td>
-        <td>{{ $item->mail }}</td>
-        <td>{{ $item->age }}</td>
-    </tr>
+    @foreach($items as $index => $item)
+    [Record{{ $index+1 }}]<br>
+    Name: {{$item->name}}<br>
+    Mail: {{$item->mail}}<br>
+    Age: {{$item->age}}<br><br>
     @endforeach
 </table>
 
