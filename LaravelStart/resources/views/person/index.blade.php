@@ -9,10 +9,11 @@
 
     @section('content')
         @foreach($items as $index => $item)
-        Record{{ $index }}<br>
+        {{ $item->getData() }}<br>
+        {{-- Record{{ $index }}<br>
         name: {{ $item->name }}<br>
         mail: {{ $item->mail }}<br>
-        age: {{ $item->age }}<br><br>
+        age: {{ $item->age }}<br><br> --}}
         @endforeach
     @endsection
 
